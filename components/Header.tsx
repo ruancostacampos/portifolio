@@ -26,7 +26,7 @@ export default function Header(){
 
     return(
         
-        <header className="pt-16">
+        <header className="pt-24">
             <audio ref={audioRef} src="/hover.mp3" />
             <ul className="flex gap-8 w-fit mx-auto font-bold">
                 <li>
