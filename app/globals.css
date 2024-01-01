@@ -17,11 +17,20 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  animation: movey 10s  infinite ease-in-out, movex 50s infinite ease-in-out;
+  background-image: url("../public/grid.svg");
+  background-position-x: 50%;
 }
+
+@keyframes movey{
+  0% {background-position-y: 0px;}
+  25% {background-position-y: 32px;}
+  50% {background-position-y: 64px;}
+}
+
+@keyframes movex{
+  0% {background-position-x: 50%;}
+  50% {background-position-x: 100%;}
+}
+
+
