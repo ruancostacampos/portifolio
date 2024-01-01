@@ -54,7 +54,7 @@ export default function Header(){
                     <a 
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
-                        href="#experiments"
+                        href="#experiments" 
                     >EXPERIMENTS_</a>
                 </li>
             </ul>
