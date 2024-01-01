@@ -6,6 +6,7 @@ export default function textHoverAnimation(event: React.MouseEvent<HTMLAnchorEle
 
 
     const targetElement = event.target as HTMLElement;
+    const ANIMATION_SPEED = 22;
 
     if(targetElement.classList.contains('hoverAnimating')){
         return
@@ -25,7 +26,7 @@ export default function textHoverAnimation(event: React.MouseEvent<HTMLAnchorEle
     for (let j = 0; j < originalText.length - 1; j++) {
         setTimeout(() => {
             targetElement.innerText = targetElement.innerText.substring(0, j) + randomChar() + targetElement.innerText.substring(j + 1)
-        }, j * 30)
+        }, j * ANIMATION_SPEED)
 
     }
 
@@ -38,7 +39,7 @@ export default function textHoverAnimation(event: React.MouseEvent<HTMLAnchorEle
                 targetElement.classList.remove('hoverAnimating')
             }
 
-        }, k * 60)
+        }, k * (2 * ANIMATION_SPEED))
     }
 
 }

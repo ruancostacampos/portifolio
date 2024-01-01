@@ -30,7 +30,8 @@ export default function Header(){
             <audio ref={audioRef} src="/hover.mp3" />
             <ul className="flex gap-8 w-fit mx-auto font-bold">
                 <li>
-                    <a  
+                    <a 
+                        className="hover:text-red-700" 
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         href="#home"
@@ -38,6 +39,7 @@ export default function Header(){
                 </li>
                 <li>
                     <a 
+                        className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         href="#projects"
@@ -45,6 +47,7 @@ export default function Header(){
                 </li>
                 <li>
                     <a 
+                        className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         href="#about"
@@ -52,6 +55,7 @@ export default function Header(){
                 </li>
                 <li>
                     <a 
+                        className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         href="#experiments" 
