@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Computer 02-Freepoly.org
+* source:	https://sketchfab.com/3d-models/old-computer-02-freepolyorg-e55d089d02b5423b99c94ed56450aaa8
+* author:	Freepoly.org (https://sketchfab.com/blackrray)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Computer 02-Freepoly.org" (https://sketchfab.com/3d-models/old-computer-02-freepolyorg-e55d089d02b5423b99c94ed56450aaa8) by Freepoly.org (https://sketchfab.com/blackrray) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
