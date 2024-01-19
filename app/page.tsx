@@ -7,7 +7,6 @@ export default function Home() {
     <>
       <Header />
         <main className="flex w-fit justify-center items-center mx-auto h-96">
-          <ModelViewer />
           <HomeDetails />
         </main>
     </>

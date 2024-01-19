@@ -9,11 +9,11 @@ import CameraPositionLogger from '../../helpers/CameraPositionLogger.jsx'
 
 export default function ModelViewer(){
 
-   const cameraStartPos = new Vector3(0, 0, 0.68)
+   const cameraStartPos = new Vector3(-0.01, 0.27, 0.62)
    
    return (
-      <>
-      <div className="flex-1 h-full">
+
+      <div className="h-96 w-96">
          <Canvas camera={{position: cameraStartPos}}>
             <axesHelper args={[5]} />
             <ambientLight args={['#ffffff', 1.2]}/>
@@ -24,6 +24,5 @@ export default function ModelViewer(){
             </Suspense>
          </Canvas>
       </div>
-      </>
    )
 }
