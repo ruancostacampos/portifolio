@@ -1,10 +1,10 @@
-import ModelViewer from "./ModelViewer"
+import ModelViewer from "../components/Home/ModelViewer"
 
-export default function HomeDetails(){
+const HomeDetails = () => {
     return  (
-        <div className="mx-auto flex flex-column justify-center items-center">
-            <ModelViewer />
-            <div className="mx-auto mt-16 max-w-lg">
+        <div className="mx-auto flex flex-column justify-center items-center mt-16">
+            <ModelViewer />         
+            <div className="mx-auto max-w-lg">
             <div>
                 <h1 className="plex-mono  text-5xl max-w-sm">AESTHETIC WEBSITES</h1>
             </div>
@@ -14,3 +14,5 @@ export default function HomeDetails(){
         </div>
     )
 }
+
+export default HomeDetails

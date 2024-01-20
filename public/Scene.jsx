@@ -7,13 +7,17 @@ Source: https://sketchfab.com/3d-models/old-computer-02-freepolyorg-e55d089d02b5
 Title: Old Computer 02-Freepoly.org
 */
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/scene.gltf')
+  const [x, setX] = useState(0)
+
+
   return (
-    <group {...props} dispose={null} position={props.position}>
+    <group {...props} dispose={null} position={props.position} rotation={[0,0,0]}>
       <group rotation={[-Math.PI / 2, 0, -1.2]} scale={0.001}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group rotation={[-Math.PI / 2, 0, 0]}>

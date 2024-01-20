@@ -1,6 +1,5 @@
-import HomeDetails from '@/components/Home/HomeDetails'
-import Header from '../components/Header'
-import ModelViewer from '@/components/Home/ModelViewer'
+import HomeDetails from '@/pages/HomeDetails'
+import Header from '../components/Header/Header'
 
 export default function Home() {
   return (
