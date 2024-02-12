@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono, IBM_Plex_Sans} from 'next/font/google'
 import './globals.css'
+import { Providers } from '@/providers'
 
 const IBM_P_MONO = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -26,7 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={IBM_P_SANS.className}>{children}</body>
+      <body className={IBM_P_SANS.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

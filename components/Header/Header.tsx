@@ -2,8 +2,11 @@
 import { useRef } from "react";
 
 import textHoverAnimation from "@/utils/textHoverAnimation";
+import { usePageContext } from "@/contexts/PageContext";
 
 export default function Header(){
+
+    const {setPage} : any = usePageContext()
 
     const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -34,6 +37,7 @@ export default function Header(){
                         className="hover:text-red-700" 
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
+                        onClick={() => setPage(0)}
                         href="#home"
                     >HOME_</a>
                 </li>
@@ -42,6 +46,7 @@ export default function Header(){
                         className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
+                        onClick={() => setPage(1)}
                         href="#projects"
                     >PROJECTS_</a>
                 </li>
@@ -50,6 +55,7 @@ export default function Header(){
                         className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
+                        onClick={() => setPage(2)}
                         href="#about"
                     >ABOUT_</a>
                 </li>
@@ -58,6 +64,7 @@ export default function Header(){
                         className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
+                        onClick={() => setPage(3)}
                         href="#experiments" 
                     >EXPERIMENTS_</a>
                 </li>

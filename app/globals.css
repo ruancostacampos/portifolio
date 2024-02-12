@@ -22,6 +22,7 @@ body {
   animation: movey 10s  infinite ease-in-out, movex 50s infinite ease-in-out;
   background-image: url("../public/grid.svg");
   background-position-x: 50%;
+  overflow-x: hidden;
 }
 
 @keyframes movey{
