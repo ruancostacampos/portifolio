@@ -8,6 +8,7 @@ import {Euler, Vector3 } from "three";
 import CameraPositionLogger from '../../helpers/CameraPositionLogger.jsx'
 import gsap from 'gsap'
 import CameraAnimation from "./CameraAnimation.jsx";
+import { useAspect } from "@react-three/drei";
 
 const ModelViewer = () => {
 

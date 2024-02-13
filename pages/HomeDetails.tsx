@@ -19,33 +19,32 @@ const variants = {
 const HomeDetails = () => {
 
     const [scope, animate] = useAnimate()
-    const [hide, setHide] = useState(false)
     const {currentPage, previousPage} : any = usePageContext() 
 
     useEffect(() => {
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 0 && previousPage == 0){
-            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y: -200}, {duration: 1, ease: "anticipate"})
             return
         }
 
         //IF IS THE CURRENT PAGE
         if(currentPage == 0){
-            animate(scope.current, {opacity: 1, scale: 1, zIndex: 0, x: 0}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 1, scale: 1, zIndex: 0, x: 0, y: 0}, {duration: 1, ease: "anticipate"})
             return
         }
 
         //IF INST THE PREVIOUS PAGE AND NOT THE ACTUAL PAGE
         if(currentPage !== 0 && previousPage !== 0){
-            animate(scope.current, {opacity: 0.05, x: -2 * document.body.clientWidth}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.05, x: -2 * document.body.clientWidth, y: -200}, {duration: 1, ease: "anticipate"})
         }
 
     }, [currentPage])
 
 
     return (
-        <div ref={scope} className="mx-auto flex flex-column justify-center items-center mt-16">
+        <div ref={scope} className="mx-auto flex flex-column justify-center items-center mt-8 absolute top-0">
             <ModelViewer/>
             <div className="mx-auto max-w-lg">
                 <div>

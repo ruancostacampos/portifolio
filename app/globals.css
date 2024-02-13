@@ -23,6 +23,7 @@ body {
   background-image: url("../public/grid.svg");
   background-position-x: 50%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @keyframes movey{
