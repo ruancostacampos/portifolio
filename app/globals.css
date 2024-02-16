@@ -18,12 +18,19 @@
   }
 }
 
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
 body {
   animation: movey 10s  infinite ease-in-out, movex 50s infinite ease-in-out;
   background-image: url("../public/grid.svg");
   background-position-x: 50%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes movey{

@@ -44,7 +44,7 @@ const HomeDetails = () => {
 
 
     return (
-        <div ref={scope} className="mx-auto flex flex-column justify-center items-center mt-8 absolute top-0">
+        <div ref={scope} className="mx-auto flex flex-column justify-center items-center top-0">
             <ModelViewer/>
             <div className="mx-auto max-w-lg">
                 <div>

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Header />
-        <main className="flex justify-center items-center mx-auto relative w-9/12">
+        <main className="flex flex-column justify-center items-center mx-auto relative h-full w-9/12">
           <HomeDetails />
           <Projects />
           <About />
