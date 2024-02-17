@@ -11,7 +11,7 @@ interface ProjectCardProps{
 
 const ProjectCard = ({title, description, tecnologies, website, github, img}: ProjectCardProps) => {
     return (
-        <div className="flex flex-col mt-4 bg-black bg-opacity-5 px-8 py-4">
+        <div className="flex flex-col mt-4 bg-black bg-opacity-15 px-8 py-4">
             <div className="bg-black bg-opacity-15 w-fit px-2">
                 <h2 className="plex-mono uppercase text-2xl">{title}</h2>
             </div>

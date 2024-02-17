@@ -22,7 +22,7 @@ const Projects = () => {
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 1 && previousPage == 1){
-            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y:-2100}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y:-2400}, {duration: 1, ease: "anticipate"})
             return
         }
 
@@ -51,6 +51,14 @@ const Projects = () => {
                     passion for creating engaging and responsive web experiences.
                 </p>
                 <ProjectCard 
+                    title="FantasticaPay"
+                    description="FantasticaPay.com.br is an online platform for the sale of credit card machines, 
+                    crafted using JavaScript, CSS, and HTML."
+                    tecnologies={['JavaScript', 'CSS', 'HTML']}
+                    website="https://fantasticapay.com.br/"
+                    img={fantasticaImage}
+                />
+                <ProjectCard 
                     title="Terraquea"
                     description="Natural products website, crafted with JavaScript, ThreeJS, GSAP, CSS, HTML. 
                     The main goal was to create an immersive experience for a coming soon page."
@@ -58,14 +66,6 @@ const Projects = () => {
                     website="https://terraquea.com.br"
                     github="https://github.com"
                     img={terraqueaImage}
-                />
-                <ProjectCard 
-                    title="FantasticaPay"
-                    description="FantasticaPay.com.br is an online platform for the sale of credit card machines, 
-                    crafted using JavaScript, CSS, and HTML."
-                    tecnologies={['JavaScript', 'CSS', 'HTML']}
-                    website="https://fantasticapay.com.br/"
-                    img={fantasticaImage}
                 />
                 <button className="px-4 py-2 bg-black bg-opacity-10 w-fit self-center mt-2" onClick={scrollToTop}>^</button>
             </div>

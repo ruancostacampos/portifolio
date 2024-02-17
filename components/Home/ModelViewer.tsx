@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls} from "@react-three/drei";
 import Computer from '../../public/Scene.jsx';
@@ -15,6 +15,24 @@ const ModelViewer = () => {
    const cameraStartPos = new Vector3(-0.16, 0.68, 0.5)
    const [triggerAnimation, setTriggerAnimation] = useState(false)
 
+
+
+   function Scale({ width, height } : any) {
+      const state = useThree()
+      const [setSize] = useState(() => state.setSize)
+      useLayoutEffect(() => {
+        setSize(width, height)
+        state.set({ setSize: () => null })
+        return () => state.set({ setSize })
+      }, [setSize, width, height])
+      return null
+   }
+
+   const handleResize = (e : any) => {
+      console.log(e.target.style.width)
+   }
+  
+
    return (
 
       <div className="mt-16 h-96 w-96">
@@ -23,10 +41,10 @@ const ModelViewer = () => {
             onMouseOver={() => setTriggerAnimation(true)}
             onMouseLeave={() => setTriggerAnimation(false)}
          >
+            <Scale width="380" height="380" />
             <ambientLight args={['#ffffff', 1.2]}/>
             <OrbitControls />
             <CameraAnimation animate={triggerAnimation}/>
-            <CameraPositionLogger event="mousedown" />
             <Suspense fallback={null}>
                <Computer position={[0.8,-1,0]}/>
             </Suspense>

@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 import ModelViewer from "../components/Home/ModelViewer"
 import { easeInOut, useAnimate } from "framer-motion"
 import { Power0 } from "gsap"
 import { Elastic } from "gsap/dist/gsap"
 import { usePageContext } from "@/contexts/PageContext"
+import { useThree } from "@react-three/fiber"
 
 type HomeProps = {
     hide: Boolean,
