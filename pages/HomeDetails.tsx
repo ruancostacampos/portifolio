@@ -53,8 +53,8 @@ const HomeDetails = () => {
                 </div>
                 <div className="h-[4px] w-full bg-red-700 my-8"></div>
                 <p className="plex-mono text-xl">I’m Ruan Costa, a FullStack Dev based in Brazil. 
-                    Working as freelancer with Node, ReactJS and NextJS, ThreeJS, and GSAP 
-                    we can create great and new experiences in the web.
+                        Working as freelancer with Node, ReactJS and NextJS, ThreeJS, and GSAP 
+                        we can create great and new experiences in the web.
                 </p>
             </div>
         </div>)

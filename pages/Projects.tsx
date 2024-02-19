@@ -22,7 +22,7 @@ const Projects = () => {
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 1 && previousPage == 1){
-            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y:-2400}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y:-1300}, {duration: 1, ease: "anticipate"})
             return
         }
 
@@ -43,13 +43,15 @@ const Projects = () => {
     return(
         
         <div ref={scope} className={`mx-auto flex flex-col justify-center items-center mt-4 w-full absolute top-0 ${notOpenStyle}`}>
-            <div className="flex flex-col mt-8">    
-                <h1 className="plex-mono  text-5xl max-w-sm">PROJECTS</h1>
+            <div className="flex flex-col mt-8 ">    
+                <h1 className="plex-mono  text-5xl max-w-sm">PROJECTS_</h1>
                 <div className="h-[4px] w-full bg-red-700 my-4"></div>
-                <p className="plex-mono w-full">
-                    Below are some of the key projects that Ive worked on, each reflecting my 
-                    passion for creating engaging and responsive web experiences.
-                </p>
+                <div className="h-fit p-3 bg-gray-500 bg-opacity-50">
+                    <p className="plex-mono w-full text-md">
+                        Below are some of the key projects that Ive worked on, each reflecting my 
+                        passion for creating engaging and responsive web experiences.
+                    </p>
+                </div>
                 <ProjectCard 
                     title="FantasticaPay"
                     description="FantasticaPay.com.br is an online platform for the sale of credit card machines, 
