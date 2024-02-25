@@ -1,24 +1,33 @@
 import { usePageContext } from "@/contexts/PageContext"
 import { useAnimate } from "framer-motion"
 import Image from "next/image"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import RuanImg from "../public/ruan.jpg"
 
 const About = () => {
 
     const [scope, animate] = useAnimate()
     const {currentPage, previousPage} : any = usePageContext()
+    const [notOpenStyle, setNotOpenStyle] = useState('max-h-0 max-w-0 overflow-hidden')
 
     useEffect(() => {
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 2 && previousPage == 2){
-            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y:-200}, {duration: 1, ease: "anticipate"})
+            
+            // IF IS IN THE HOME PAGE
+            if(currentPage == 0){
+                animate(scope.current, {opacity: 0.00, scale: 2.0, zIndex: -1, y: -2 * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+                return
+            }
+
+            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, }, {duration: 1, ease: "anticipate"})
             return
         }
 
         //IF IS THE CURRENT PAGE
         if(currentPage == 2){
+            setNotOpenStyle('')
             animate(scope.current, {opacity: 1, scale: 1, zIndex: 0, x: 0, y: 0}, {duration: 1, ease: "anticipate"})
             return
         }
@@ -26,12 +35,13 @@ const About = () => {
         //IF INST THE PREVIOUS PAGE AND NOT THE ACTUAL PAGE
         if(currentPage !== 2 && previousPage !== 2){
             animate(scope.current, {opacity: 0.05, x: -2 * document.body.clientWidth}, {duration: 1, ease: "anticipate"})
+            return
         }
 
     }, [currentPage])
 
     return (
-        <div ref={scope} className="mx-auto flex flex-column justify-center items-center mt-8 absolute top-0 plex-mono w-full max-w-5xl">
+        <div ref={scope} className={`mx-auto flex flex-column justify-center items-center mt-8 absolute top-0 plex-mono w-full max-w-5xl ${notOpenStyle}`}>
             <div className="w-full">
                 <h1 className="plex-mono  text-5xl max-w-sm">ABOUT_</h1>
                 <div className="h-[4px] w-full bg-red-700 my-4"></div>
@@ -60,6 +70,9 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="flex flex-row justify-end">
+                    <p className="text-right plex-mono w-fit bg-gray-500 bg-opacity-50 rounded px-4 py-2">version: v0.1</p>
                 </div>
             </div>
         </div>

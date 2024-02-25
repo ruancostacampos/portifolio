@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/Projects/ProjectCard"
 import { usePageContext } from "@/contexts/PageContext"
 import { useAnimate } from "framer-motion"
-import { useEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 import terraqueaImage from "../public/terraquea.png"
 import fantasticaImage from '../public/fantasticapay.png'
 
@@ -19,10 +19,19 @@ const Projects = () => {
     }
     
     useEffect(() => {
+
+        const yTimes = -(scope.current.getClientRects()[0].height - 120) / document.body.clientHeight - 0.3
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 1 && previousPage == 1){
-            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y:-1300}, {duration: 1, ease: "anticipate"})
+
+            // IF IS IN THE HOME PAGE
+            if(currentPage == 0){
+                animate(scope.current, {opacity: 0.00, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+                return
+            }
+
+            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
             return
         }
 
@@ -66,7 +75,7 @@ const Projects = () => {
                     The main goal was to create an immersive experience for a coming soon page."
                     tecnologies={['JavaScript', 'ThreeJS', 'GSAP', 'CSS', 'HTML']}
                     website="https://terraquea.com.br"
-                    github="https://github.com"
+                    github="https://github.com/ruancostacampos/terraquea-coming-soon/tree/main"
                     img={terraqueaImage}
                 />
                 <button className="px-4 py-2 bg-black bg-opacity-10 w-fit self-center mt-2" onClick={scrollToTop}>^</button>
