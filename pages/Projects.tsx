@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/Projects/ProjectCard"
 import { usePageContext } from "@/contexts/PageContext"
 import { useAnimate } from "framer-motion"
-import { useEffect, useLayoutEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import terraqueaImage from "../public/terraquea.png"
 import fantasticaImage from '../public/fantasticapay.png'
 

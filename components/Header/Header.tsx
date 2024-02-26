@@ -55,18 +55,18 @@ export default function Header(){
                         className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
-                        onClick={() => setPage(2)}
-                        href="#about"
-                    >ABOUT_</a>
+                        onClick={() => setPage(3)}
+                        href="#experiments" 
+                    >EXPERIMENTS_</a>
                 </li>
                 <li>
                     <a 
                         className="hover:text-red-700"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
-                        onClick={() => setPage(3)}
-                        href="#experiments" 
-                    >EXPERIMENTS_</a>
+                        onClick={() => setPage(2)}
+                        href="#about"
+                    >ABOUT_</a>
                 </li>
             </ul>
         </header>

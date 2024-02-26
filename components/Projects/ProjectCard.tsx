@@ -6,10 +6,11 @@ interface ProjectCardProps {
     tecnologies: string[],
     website: string,
     github?: string,
-    img: StaticImageData,
+    img?: StaticImageData,
+    video?: string,
 }
 
-const ProjectCard = ({ title, description, tecnologies, website, github, img }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, tecnologies, website, github, img, video }: ProjectCardProps) => {
     return (
         <div className="flex flex-col mt-4 py-4 rounded">
             <div className="w-fit px-2">
@@ -17,7 +18,12 @@ const ProjectCard = ({ title, description, tecnologies, website, github, img }: 
                 <div className="h-[4px] w-full bg-red-700 mt-2"></div>
             </div>
             <div className=" bg-gray-500 bg-opacity-50 flex flex-col xl:flex-row mt-4 rounded xl:h-80">
-                <Image src={img} width={1280} height={608} alt="Terraquea project image" className="xl:w-1/2 w-full xl:rounded-l-md object-cover rounded-t xl:rounded-t-none" />
+                {img && <Image src={img} width={1280} height={608} alt="Terraquea project image" className="xl:w-1/2 w-full xl:rounded-l-md object-cover rounded-t xl:rounded-t-none" />}
+                {video && 
+                    (<video className="xl:w-1/2 w-full xl:rounded-l-md object-cover rounded-t xl:rounded-t-none" autoPlay loop muted>
+                        <source src={video} type="video/webm" />
+                    </video>
+                )}
                 <div className="flex flex-col h-full">
                     <p className="plex-mono p-4 bg-neutral-800 bg-opacity-70 text-gray-100 xl:rounded-tr-md">
                         {description}

@@ -50,29 +50,30 @@ const About = () => {
                     <div className="flex flex-col h-full p-3 pl-4">
                         <p className="plex-mono">
                             Enthusiastic about web development, I am currently diving into the world of 
-                            programming with a primary focus on web technologies. Ive been exploring Three.js, GSAP, 
-                            Next.js, and React to craft engaging web experiences. As a budding developer,
-                            Im also venturing into backend development using Node.js. 
+                            programming with a primary focus on web technologies. Ive been exploring <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">Three.js</span>, <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">GSAP</span>, 
+                            <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">Next.js</span>, and <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">React.js</span> to craft engaging web experiences. As a budding developer,
+                            Im also venturing into backend development using <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">Node.js.</span>
                             I am eager to embrace challenges, learn, and grow in the dynamic
                             field of web development. Open to opportunities that will allow me 
                             to apply and expand my skills, I bring a fresh perspective and a
-                            commitment to continuous learning.
+                            commitment to <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">continuous learning.</span>
                         </p>
                         <div className="flex flex-row justify-end w-full pt-4 gap-4 plex-mono h-full">
-                            <div className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black w-fit">
-                                <a href="https://github.com/ruancostacampos" target="_blank">GITHUB</a>
+                            <div className="text-right plex-mono bg-neutral-800 bg-opacity-70 rounded px-4 py-2 hover:bg-slate-50 hover:text-black w-fit text-gray-50">
+                                <a href="https://github.com/ruancostacampos" target="_blank">github</a>
                             </div>
-                            <div className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black w-fit">
-                                <a href="https://linkedin.com/in/ruancostacampos" target="_blank">LINKEDIN</a>
+                            <div className="text-right plex-mono bg-neutral-800 bg-opacity-70 rounded px-4 py-2 hover:bg-slate-50 hover:text-black w-fit text-gray-50">
+                                <a href="https://linkedin.com/in/ruancostacampos" target="_blank">linkedin</a>
                             </div>
-                            <div className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black w-fit">
-                                <a href="https://wa.me/5577991882211" target="_blank">WHATSAPP</a>
+                            <div className="text-right plex-mono bg-neutral-800 bg-opacity-70 rounded px-4 py-2 hover:bg-slate-50 hover:text-black w-fit text-gray-50">
+                                <a href="https://wa.me/5577991882211" target="_blank">whatsapp</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row justify-end">
-                    <p className="text-right plex-mono w-fit bg-gray-500 bg-opacity-50 rounded px-4 py-2">version: v0.1</p>
+                <div className="flex flex-row justify-end gap-2 flex-wrap">
+                    <p className="text-right plex-mono w-fit bg-gray-500 bg-opacity-50 rounded px-4 py-2">Github repos: <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">36</span></p>
+                    <p className="text-right plex-mono w-fit bg-gray-500 bg-opacity-50 rounded px-4 py-2">Freelances: <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">6</span></p>
                 </div>
             </div>
         </div>
