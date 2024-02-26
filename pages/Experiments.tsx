@@ -55,7 +55,7 @@ const Experiments = () => {
                 <div className="h-[4px] w-full bg-red-700 my-4"></div>
                 <div className="h-fit p-3 bg-gray-500 bg-opacity-50">
                     <p className="plex-mono w-full text-md">
-                    Conducting experimental web endeavors, I've explored the realms of Three.js, 
+                    Conducting experimental web endeavors, Ive explored the realms of Three.js, 
                     JavaScript, CSS, and HTML to create innovative and immersive 3D web experiences. 
                     These projects showcase my commitment to pushing the boundaries and experimenting 
                     with cutting-edge technologies in the web development landscape.
