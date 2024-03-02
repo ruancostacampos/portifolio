@@ -45,11 +45,11 @@ const HomeDetails = () => {
 
 
     return (
-        <div ref={scope} className="mx-auto flex flex-column justify-center items-center top-0">
+        <div ref={scope} className="mx-auto flex flex-col md:flex-row justify-center items-center top-0">
             <ModelViewer/>
-            <div className="mx-auto max-w-lg">
+            <div className="mx-auto max-w-lg p-4 md:p-0">
                 <div>
-                    <h1 className="plex-mono  text-5xl max-w-sm">AESTHETIC WEBSITES</h1>
+                    <h1 className="plex-mono  text-5xl max-w-sm text-center md:text-left">AESTHETIC WEBSITES</h1>
                 </div>
                 <div className="h-[4px] w-full bg-red-700 my-8"></div>
                 <p className="plex-mono text-xl">I’m Ruan Costa, a FullStack Dev based in Brazil. 

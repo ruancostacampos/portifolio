@@ -38,14 +38,14 @@ const ProjectCard = ({ title, description, tecnologies, website, github, img, vi
                     <div className="flex flex-row mt-2 gap-2 justify-end w-full p-4 h-full">
                         <div className="flex gap-4 self-end flex-row-reverse">
                         {website &&
-                            <div className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black">
-                                <a href={website} target="_blank">Open website</a>
-                            </div>
+                            <a href={website} target="_blank" className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black">
+                                Open website
+                            </a>
                         }
                         {github &&
-                            <div className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black">
-                            <a href={github} target="_blank">Github</a>
-                        </div>
+                            <a href={github} target="_blank" className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black">
+                                Github
+                            </a>
                         }
                         </div>
                     </div>

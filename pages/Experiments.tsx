@@ -36,7 +36,7 @@ const Experiments = () => {
         //IF IS THE CURRENT PAGE
         if(currentPage == 3){
             setNotOpenStyle('')
-            animate(scope.current, {opacity: 1, scale: 1, zIndex: 0, x: 0, y: 0}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 1, scale: 1, zIndex: 0, x: 0, y: 0}, {duration: 1, ease: "circInOut"})
             return
         }
 
@@ -76,7 +76,7 @@ const Experiments = () => {
                     description="Learning raycast in my project using Three.js, 
                     JavaScript, CSS, and HTML. Hover over each cube to witness dynamic movement, 
                     simulating an engaging and intuitive selection interaction."
-                    tecnologies={['JavaScript', 'ThreeJS',]}
+                    tecnologies={['React', 'GSAP',]}
                     website="https://ruancostacampos.github.io/three-js-experiment/"
                     github="https://github.com/ruancostacampos/three-js-experiment/"
                     video="/terraquea_menu.webm"
