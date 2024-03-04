@@ -47,7 +47,7 @@ const HomeDetails = () => {
     return (
         <div ref={scope} className="mx-auto flex flex-col md:flex-row justify-center items-center top-0">
             <ModelViewer/>
-            <div className="mx-auto max-w-lg p-4 md:p-0">
+            <div className="mx-auto max-w-lg px-8 md:p-0">
                 <div>
                     <h1 className="plex-mono  text-5xl max-w-sm text-center md:text-left">AESTHETIC WEBSITES</h1>
                 </div>

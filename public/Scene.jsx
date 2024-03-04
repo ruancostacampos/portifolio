@@ -7,14 +7,18 @@ Source: https://sketchfab.com/3d-models/old-computer-02-freepolyorg-e55d089d02b5
 Title: Old Computer 02-Freepoly.org
 */
 
-import { useEffect, useState } from 'react'
+import { useLoaderContext } from '@/contexts/LoaderContext'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useEffect} from 'react'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/scene.gltf')
-  const [x, setX] = useState(0)
+  
+  const { nodes, materials} = useGLTF('/scene.gltf')
+  const {setModelLoaded} = useLoaderContext()
 
+  useEffect(() => {
+    setModelLoaded(true)
+  }, [])
 
   return (
     <group {...props} dispose={null} position={props.position} rotation={[0,0,0]}>

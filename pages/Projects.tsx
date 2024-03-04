@@ -12,7 +12,7 @@ const Projects = () => {
     const [notOpenStyle, setNotOpenStyle] = useState('max-h-0 max-w-0 overflow-hidden')
 
     const scrollToTop = () => {
-        window.scrollTo({
+        document.body.scrollTo({
             top: 0,
             behavior: 'smooth',
         })
@@ -78,7 +78,7 @@ const Projects = () => {
                     github="https://github.com/ruancostacampos/terraquea-coming-soon/tree/main"
                     img={terraqueaImage}
                 />
-                <button className="px-4 py-2 bg-black bg-opacity-10 w-fit self-center mt-2" onClick={scrollToTop}>^</button>
+                <button className="px-4 py-2 bg-black bg-opacity-10 w-fit self-center mt-2 z-10" onClick={scrollToTop}>^</button>
             </div>
         </div>
     )

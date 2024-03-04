@@ -10,7 +10,7 @@ const Experiments = () => {
     const [notOpenStyle, setNotOpenStyle] = useState('max-h-0 max-w-0 overflow-hidden')
 
     const scrollToTop = () => {
-        window.scrollTo({
+        document.body.scrollTo({
             top: 0,
             behavior: 'smooth',
         })

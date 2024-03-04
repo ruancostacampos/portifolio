@@ -7,7 +7,7 @@ import { usePageContext } from "@/contexts/PageContext";
 export default function Header(){
 
     const [isOpen, setIsOpen] = useState(false)
-    const [customStyle, setCustomStyle] = useState('')
+    const [customStyle, setCustomStyle] = useState('hidden')
     const {setPage} : any = usePageContext()
 
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -15,19 +15,19 @@ export default function Header(){
     const playAudio = () => {
 
         if (audioRef.current) {
-          audioRef.current.play();
+          audioRef.current.play()
         }
 
-    };
+    }
 
     const stopAudio = () => {
         
         if (audioRef.current) {
           audioRef.current.pause();
-          audioRef.current.currentTime = 0;
+          audioRef.current.currentTime = 0
         }
 
-    };
+    }
 
     const handleClick = () => {
 
@@ -35,11 +35,20 @@ export default function Header(){
         if(window.innerWidth < 768){ 
             setCustomStyle('hidden')
         }
+        
+        scrollToTop()
     }
 
     const handleOpen = () => {
         setCustomStyle('')
         setIsOpen(!isOpen)
+    }
+
+    const scrollToTop = () => {
+        document.body.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
     }
 
     useEffect( () => {
@@ -56,6 +65,8 @@ export default function Header(){
             }
 
         }
+
+        handleResize()
 
         window.addEventListener('resize', handleResize)
 

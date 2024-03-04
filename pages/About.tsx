@@ -58,7 +58,7 @@ const About = () => {
                             to apply and expand my skills, I bring a fresh perspective and a
                             commitment to <span className="bg-neutral-800 bg-opacity-70 px-2 rounded text-gray-50">continuous learning.</span>
                         </p>
-                        <div className="flex flex-row justify-end w-full pt-4 gap-4 plex-mono h-full">
+                        <div className="flex flex-row flex-wrap justify-end w-full pt-4 gap-4 plex-mono h-full">
                             <div className="text-right plex-mono bg-neutral-800 bg-opacity-70 rounded px-4 py-2 hover:bg-slate-50 hover:text-black w-fit text-gray-50">
                                 <a href="https://github.com/ruancostacampos" target="_blank">github</a>
                             </div>
