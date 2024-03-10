@@ -77,9 +77,25 @@ const Experiments = () => {
                     JavaScript, CSS, and HTML. Hover over each cube to witness dynamic movement, 
                     simulating an engaging and intuitive selection interaction."
                     tecnologies={['React', 'GSAP',]}
-                    website="https://ruancostacampos.github.io/three-js-experiment/"
-                    github="https://github.com/ruancostacampos/three-js-experiment/"
+                    website="https://terraquea2.vercel.app/"
+                    github="https://github.com/ruancostacampos/terraquea2"
                     video="/terraquea_menu.webm"
+                />
+                <ProjectCard 
+                    title="02_Word_Animation"
+                    description="JavaScript animation ready to dazzle and seamlessly integrate into other websites."
+                    tecnologies={['JavaScript', 'HTML',]}
+                    website="https://ruancostacampos.github.io/changing-char-animation/"
+                    github="https://github.com/ruancostacampos/changing-char-animation"
+                    video="/wordAnimation.webm"
+                />
+                <ProjectCard 
+                    title="03_Oman_Quiz"
+                    description="A quiz created collaboratively with an international team on a voluntary basis, developed using JavaScript."
+                    tecnologies={['JavaScript', 'CSS', 'HTML']}
+                    website="https://ruancostacampos.github.io/oman-quiz/"
+                    github="https://github.com/ruancostacampos/oman-quiz"
+                    video="/omanQuiz.webm"
                 />
                 <button className="px-4 py-2 bg-black bg-opacity-10 w-fit self-center mt-2" onClick={scrollToTop}>^</button>
             </div>

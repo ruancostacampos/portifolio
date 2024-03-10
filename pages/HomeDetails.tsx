@@ -4,7 +4,7 @@ import { easeInOut, useAnimate } from "framer-motion"
 import { Power0 } from "gsap"
 import { Elastic } from "gsap/dist/gsap"
 import { usePageContext } from "@/contexts/PageContext"
-import { useThree } from "@react-three/fiber"
+import { useFrame } from "@react-three/fiber"
 
 type HomeProps = {
     hide: Boolean,
@@ -21,6 +21,7 @@ const HomeDetails = () => {
 
     const [scope, animate] = useAnimate()
     const {currentPage, previousPage} : any = usePageContext() 
+
 
     useEffect(() => {
         
@@ -52,7 +53,7 @@ const HomeDetails = () => {
                     <h1 className="plex-mono  text-5xl max-w-sm text-center md:text-left">AESTHETIC WEBSITES</h1>
                 </div>
                 <div className="h-[4px] w-full bg-red-700 my-8"></div>
-                <p className="plex-mono text-xl">I’m Ruan Costa, a FullStack Dev based in Brazil. 
+                <p className="plex-mono text-xl">I’m Ruan Costa, a Front-End Dev based in Brazil. 
                         Working as freelancer with Node, ReactJS and NextJS, ThreeJS, and GSAP 
                         we can create great and new experiences in the web.
                 </p>

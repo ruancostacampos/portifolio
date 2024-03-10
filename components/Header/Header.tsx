@@ -60,7 +60,6 @@ export default function Header(){
             }
 
             if(window.innerWidth < 768){ 
-                console.log("escondendo handleResize")
                 setCustomStyle('hidden')
             }
 

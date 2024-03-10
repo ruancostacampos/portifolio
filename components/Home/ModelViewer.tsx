@@ -1,15 +1,10 @@
 'use client';
 
 import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls} from "@react-three/drei";
-import Computer from '../../public/Scene.jsx';
-import {Euler, Vector3 } from "three";
-import CameraPositionLogger from '../../helpers/CameraPositionLogger.jsx'
-import gsap from 'gsap'
-import CameraAnimation from "./CameraAnimation.jsx";
-import { useAspect } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import {Vector3, WebGL1Renderer } from "three";
 import { useLoaderContext } from "@/contexts/LoaderContext";
+import CRTMonitor from '../Models/CRTMonitor'
 
 const ModelViewer = () => {
 
@@ -31,31 +26,28 @@ const ModelViewer = () => {
       return null
    }
 
-   const handleResize = (e : any) => {
-      console.log(e.target.style.width)
-   }
-
    useEffect(() => {
-      console.log('IS MODEL LOADED -> ' + isModelLoaded)
       if(isModelLoaded){
+         console.log('Model loaded.')
          setCustomStyle('hidden')
       }
    }, [isModelLoaded])
+  
   
 
    return(
       <div className="relative mt-16">
          <div className={`absolute w-8 h-8 flex justify-center items-center left-1/2 top-0 ${customStyle}`}>Carregando...</div>
          <Canvas 
-            camera={{position: cameraStartPos}} 
+            gl={canvas => new WebGL1Renderer({ canvas, alpha: true, antialias: true })}
+            camera={{position: [0,0,1.5]}}
             onMouseOver={() => setTriggerAnimation(true)}
             onMouseLeave={() => setTriggerAnimation(false)}
          >
             <Scale width="380" height="380" />
-            <ambientLight args={['#ffffff', 1.2]}/>
-            <CameraAnimation animate={triggerAnimation}/>
+            <ambientLight args={['#ffffff', 1.2]} position={[2, 3, 0]}/>
                <Suspense fallback={null}>
-                  <Computer position={[0.8,-1,0]}/>
+                 <CRTMonitor />
                </Suspense>
          </Canvas>
       </div>

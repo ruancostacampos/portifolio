@@ -4,6 +4,8 @@ import { useAnimate } from "framer-motion"
 import { useEffect, useState } from "react"
 import terraqueaImage from "../public/terraquea.png"
 import fantasticaImage from '../public/fantasticapay.png'
+import calculator from '../public/calculator.png'
+import world from '../public/world.png'
 
 const Projects = () => {
 
@@ -77,6 +79,21 @@ const Projects = () => {
                     website="https://terraquea.com.br"
                     github="https://github.com/ruancostacampos/terraquea-coming-soon/tree/main"
                     img={terraqueaImage}
+                />
+                <ProjectCard 
+                    title="Credit Card Taxes Calculator"
+                    description="Introducing a bespoke credit card fee calculator tailored to the user's rates, utilized for precise loan calculations and financial planning."
+                    tecnologies={['JavaScript', 'CSS', 'HTML']}
+                    website="https://mundodasmaquininhas.com.br/calculadora/"
+                    img={calculator}
+                />
+                <ProjectCard 
+                    title="World Of Card Machines"
+                    description="Designed and developed the 'World of Card Machines' website, offering diverse options with transparent rates, 
+                    zero PIX fees, and exclusive discounts for informed payment choices."
+                    tecnologies={['JavaScript', 'CSS', 'HTML']}
+                    website="https://mundodasmaquininhas.com.br/"
+                    img={world}
                 />
                 <button className="px-4 py-2 bg-black bg-opacity-10 w-fit self-center mt-2 z-10" onClick={scrollToTop}>^</button>
             </div>
