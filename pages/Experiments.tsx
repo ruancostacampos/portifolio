@@ -73,9 +73,7 @@ const Experiments = () => {
                 />
                 <ProjectCard 
                     title="01_Custom_Slider"
-                    description="Learning raycast in my project using Three.js, 
-                    JavaScript, CSS, and HTML. Hover over each cube to witness dynamic movement, 
-                    simulating an engaging and intuitive selection interaction."
+                    description="I was recreating a version of the Terraquea website and decided to create a different component based on something I envisioned. This implementation was more of a proof of concept."
                     tecnologies={['React', 'GSAP',]}
                     website="https://terraquea2.vercel.app/"
                     github="https://github.com/ruancostacampos/terraquea2"
