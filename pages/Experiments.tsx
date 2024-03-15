@@ -18,18 +18,18 @@ const Experiments = () => {
     
     useEffect(() => {
 
-        const yTimes = -(scope.current.getClientRects()[0].height - 120) / document.body.clientHeight - 0.3
+        const yTimes = scope.current.getClientRects()[0].height / window.innerHeight
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 3 && previousPage == 3){
 
             // IF IS IN THE HOME PAGE
             if(currentPage == 0){
-                animate(scope.current, {opacity: 0.00, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+                animate(scope.current, {opacity: 0, scale: 2.0, zIndex: -1, y: -1.3 * yTimes * window.innerHeight}, {duration: 1, ease: "anticipate"})
                 return
             }
 
-            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y: -1.3 * yTimes * window.innerHeight}, {duration: 1, ease: "anticipate"})
             return
         }
 
