@@ -1,0 +1,40 @@
+{
+    "home": {
+      "text": "Eu sou Ruan Costa, um desenvolvedor Front-End vivendo no Brasil. Trabalhando como freelancer usando Node, ReactJS e NextJS, ThreeJS e GSAP, podemos criar experiências incríveis e inovadoras na web."
+    },
+    "projects": {
+      "name": "projetos_",
+      "description": "Abaixo estão alguns dos principais projetos em que trabalhei, cada um refletindo minha paixão por criar experiências web envolventes e responsivas.",
+      "open_website": "Abrir website",
+      "project0_title": "FantasticaPay",
+      "project0_description": "FantasticaPay.com.br é uma plataforma online para venda de máquinas de cartão de crédito, desenvolvida com JavaScript, CSS e HTML.",
+      "project1_title": "Terraquea",
+      "project1_description": "Website de produtos naturais, desenvolvido com JavaScript, ThreeJS, GSAP, CSS e HTML. O principal objetivo era criar uma experiência imersiva para uma página de lançamento em breve.",
+      "project2_title": "CREDIT CARD TAXES CALCULATOR",
+      "project2_description": "Introduzindo uma calculadora de taxas de cartão de crédito personalizada para as taxas do usuário, utilizada para cálculos precisos de empréstimos e planejamento financeiro.",
+      "project3_title": "WORLD OF CARD MACHINES",
+      "project3_description": "Projetado e desenvolvido o website 'Mundo das Máquinas de Cartão', oferecendo diversas opções com taxas transparentes, sem taxas de PIX e descontos exclusivos para escolhas de pagamento informadas."
+    },
+    "experiments": {
+      "name": "experimentos_",
+      "description": "Conduzindo alguns experimentos na web, explorei os reinos do Three.js, JavaScript, CSS e HTML para criar experiências web 3D inovadoras e imersivas. Esses projetos mostram meu compromisso em chegar nos meus limites e experimentar tecnologias de ponta no cenário de desenvolvimento web.",
+      "experiment0_title": "00_RAYCAST",
+      "experiment0_description": "Aprendendo raycast em meu projeto usando Three.js, JavaScript, CSS e HTML. Passe o mouse sobre cada cubo para testemunhar movimento dinâmico, simulando uma interação de seleção envolvente e intuitiva.",
+      "experiment1_title": "01_CUSTOM_SLIDER",
+      "experiment1_description": "Eu estava recriando uma versão do site Terraquea e decidi criar um componente diferente com base em algo que imaginei. Esta implementação foi mais uma prova de conceito.",
+      "experiment2_title": "02_WORD_ANIMATION",
+      "experiment2_description": "Animação JavaScript pronta para impressionar e integrar-se perfeitamente a outros sites.",
+      "experiment3_title": "03_OMAN_QUIZ",
+      "experiment3_description": "Um quiz criado colaborativamente com uma equipe internacional em uma base voluntária, desenvolvido usando JavaScript."
+    },
+    "about": {
+      "name" : "Sobre_",
+      "description": "Entusiasmado com o desenvolvimento web, atualmente estou mergulhando no mundo da programação com foco principal em tecnologias web. Tenho explorado Three.js, GSAP, Next.js e React.js para criar experiências web envolventes. Como um desenvolvedor iniciante, também estou me aventurando no desenvolvimento backend usando Node.js. Estou ansioso para abraçar desafios, aprender e crescer no campo dinâmico do desenvolvimento web. Aberto a oportunidades que me permitam aplicar e expandir minhas habilidades, trago um novo olhar e um compromisso com a aprendizagem contínua."
+    },
+    "header": {
+      "home": "home_",
+      "projects": "projetos_",
+      "experiments": "experimentos_",
+      "about": "sobre_"
+    }
+}

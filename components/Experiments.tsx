@@ -1,13 +1,17 @@
+'use client'
+
 import { useAnimate } from "framer-motion"
 import { useEffect, useState } from "react"
 import { usePageContext } from "@/contexts/PageContext"
 import ProjectCard from "@/components/Projects/ProjectCard"
+import { useTranslations } from "next-intl"
 
 const Experiments = () => {
 
     const [scope, animate] = useAnimate()
     const {currentPage, previousPage} : any = usePageContext()
     const [notOpenStyle, setNotOpenStyle] = useState('max-h-0 max-w-0 overflow-hidden')
+    const t = useTranslations('experiments')
 
     const scrollToTop = () => {
         document.body.scrollTo({
@@ -18,18 +22,18 @@ const Experiments = () => {
     
     useEffect(() => {
 
-        const yTimes = -(scope.current.getClientRects()[0].height - 120) / document.body.clientHeight - 0.3
+        const yTimes = scope.current.getClientRects()[0].height / window.innerHeight
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 3 && previousPage == 3){
 
             // IF IS IN THE HOME PAGE
             if(currentPage == 0){
-                animate(scope.current, {opacity: 0.00, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+                animate(scope.current, {opacity: 0, scale: 2.0, zIndex: -1, y: -1.3 * yTimes * window.innerHeight}, {duration: 1, ease: "anticipate"})
                 return
             }
 
-            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y: -1.3 * yTimes * window.innerHeight}, {duration: 1, ease: "anticipate"})
             return
         }
 
@@ -51,45 +55,38 @@ const Experiments = () => {
         
         <div ref={scope} className={`mx-auto flex flex-col justify-center items-center mt-4 w-full absolute top-0 ${notOpenStyle}`}>
             <div className="flex flex-col mt-8 ">    
-                <h1 className="plex-mono  text-5xl max-w-sm">EXPERIMENTS_</h1>
+                <h1 className="plex-mono  text-5xl max-w-sm uppercase">{t('name')}</h1>
                 <div className="h-[4px] w-full bg-red-700 my-4"></div>
                 <div className="h-fit p-3 bg-gray-500 bg-opacity-50">
-                    <p className="plex-mono w-full text-md">
-                    Conducting experimental web endeavors, Ive explored the realms of Three.js, 
-                    JavaScript, CSS, and HTML to create innovative and immersive 3D web experiences. 
-                    These projects showcase my commitment to pushing the boundaries and experimenting 
-                    with cutting-edge technologies in the web development landscape.
-                    </p>
+                    <p className="plex-mono w-full text-md">{t('description')}</p>
                 </div>
                 <ProjectCard 
-                    title="00_Raycast"
-                    description="Learning raycast in my project using Three.js, 
-                    JavaScript, CSS, and HTML. Hover over each cube to witness dynamic movement, 
-                    simulating an engaging and intuitive selection interaction."
+                    title={t('experiment0_title')}
+                    description={t('experiment0_description')}
                     tecnologies={['JavaScript', 'ThreeJS',]}
                     website="https://ruancostacampos.github.io/three-js-experiment/"
                     github="https://github.com/ruancostacampos/three-js-experiment/"
                     video="/raycast.webm"
                 />
                 <ProjectCard 
-                    title="01_Custom_Slider"
-                    description="I was recreating a version of the Terraquea website and decided to create a different component based on something I envisioned. This implementation was more of a proof of concept."
+                    title={t('experiment1_title')}
+                    description={t('experiment1_description')}
                     tecnologies={['React', 'GSAP',]}
                     website="https://terraquea2.vercel.app/"
                     github="https://github.com/ruancostacampos/terraquea2"
                     video="/terraquea_menu.webm"
                 />
                 <ProjectCard 
-                    title="02_Word_Animation"
-                    description="JavaScript animation ready to dazzle and seamlessly integrate into other websites."
+                    title={t('experiment2_title')}
+                    description={t('experiment2_description')}
                     tecnologies={['JavaScript', 'HTML',]}
                     website="https://ruancostacampos.github.io/changing-char-animation/"
                     github="https://github.com/ruancostacampos/changing-char-animation"
                     video="/wordAnimation.webm"
                 />
                 <ProjectCard 
-                    title="03_Oman_Quiz"
-                    description="A quiz created collaboratively with an international team on a voluntary basis, developed using JavaScript."
+                    title={t('experiment3_title')}
+                    description={t('experiment3_description')}
                     tecnologies={['JavaScript', 'CSS', 'HTML']}
                     website="https://ruancostacampos.github.io/oman-quiz/"
                     github="https://github.com/ruancostacampos/oman-quiz"

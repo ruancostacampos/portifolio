@@ -1,0 +1,40 @@
+{
+    "home": {
+      "text": "I’m Ruan Costa, a Front-End Dev based in Brazil. Working as freelancer with Node, ReactJS and NextJS, ThreeJS, and GSAP we can create great and new experiences in the web!"
+    },
+    "projects" : {
+      "name": "projects_",
+      "description": "Below are some of the key projects that Ive worked on, each reflecting my passion for creating engaging and responsive web experiences.",
+      "open_website": "Open website",
+      "project0_title": "FantasticaPay",
+      "project0_description": "FantasticaPay.com.br is an online platform for the sale of credit card machines, crafted using JavaScript, CSS, and HTML.",
+      "project1_title": "Terraquea",
+      "project1_description": "Natural products website, crafted with JavaScript, ThreeJS, GSAP, CSS, HTML. The main goal was to create an immersive experience for a coming soon page.",
+      "project2_title": "CREDIT CARD TAXES CALCULATOR",
+      "project2_description": "Introducing a bespoke credit card fee calculator tailored to the user's rates, utilized for precise loan calculations and financial planning.",
+      "project3_title": "WORLD OF CARD MACHINES",
+      "project3_description": "Designed and developed the 'World of Card Machines' website, offering diverse options with transparent rates, zero PIX fees, and exclusive discounts for informed payment choices."
+    },
+    "experiments": {
+      "name": "experiments_",
+      "description": "Conducting experimental web endeavors, Ive explored the realms of Three.js, JavaScript, CSS, and HTML to create innovative and immersive 3D web experiences. These projects showcase my commitment to pushing the boundaries and experimenting with cutting-edge technologies in the web development landscape.",
+      "experiment0_title": "00_RAYCAST",
+      "experiment0_description": "Learning raycast in my project using Three.js, JavaScript, CSS, and HTML. Hover over each cube to witness dynamic movement, simulating an engaging and intuitive selection interaction.",
+      "experiment1_title": "01_CUSTOM_SLIDER",
+      "experiment1_description": "I was recreating a version of the Terraquea website and decided to create a different component based on something I envisioned. This implementation was more of a proof of concept.",
+      "experiment2_title": "02_WORD_ANIMATION",
+      "experiment2_description": "JavaScript animation ready to dazzle and seamlessly integrate into other websites.",
+      "experiment3_title": "03_OMAN_QUIZ",
+      "experiment3_description": "A quiz created collaboratively with an international team on a voluntary basis, developed using JavaScript."
+    },
+    "about": {
+      "name" : "about_",
+      "description": "Enthusiastic about web development, I am currently diving into the world of programming with a primary focus on web technologies. Ive been exploring Three.js, GSAP, Next.js, and React.js to craft engaging web experiences. As a budding developer, Im also venturing into backend development using Node.js. I am eager to embrace challenges, learn, and grow in the dynamic field of web development. Open to opportunities that will allow me to apply and expand my skills, I bring a fresh perspective and a commitment to continuous learning."
+    },
+    "header": {
+      "home": "home_",
+      "projects": "projects_",
+      "experiments": "experiments_",
+      "about": "about_"
+    }
+}

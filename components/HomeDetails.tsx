@@ -1,13 +1,13 @@
+'use client'
+
 import { useEffect, useLayoutEffect, useState } from "react"
-import ModelViewer from "../components/Home/ModelViewer"
-import { easeInOut, useAnimate } from "framer-motion"
-import { Power0 } from "gsap"
-import { Elastic } from "gsap/dist/gsap"
+import ModelViewer from "./Home/ModelViewer"
+import {useAnimate } from "framer-motion"
 import { usePageContext } from "@/contexts/PageContext"
-import { useFrame } from "@react-three/fiber"
+import { useTranslations } from "next-intl"
 
 type HomeProps = {
-    hide: Boolean,
+    texts: any,
 }
 
 const variants = {
@@ -20,11 +20,11 @@ const variants = {
 const HomeDetails = () => {
 
     const [scope, animate] = useAnimate()
-    const {currentPage, previousPage} : any = usePageContext() 
-
+    const {currentPage, previousPage} : any = usePageContext()
+    const t = useTranslations('home')
 
     useEffect(() => {
-        
+
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 0 && previousPage == 0){
             animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y: -200}, {duration: 1, ease: "anticipate"})
@@ -53,10 +53,7 @@ const HomeDetails = () => {
                     <h1 className="plex-mono  text-5xl max-w-sm text-center md:text-left">AESTHETIC WEBSITES</h1>
                 </div>
                 <div className="h-[4px] w-full bg-red-700 my-8"></div>
-                <p className="plex-mono text-xl">I’m Ruan Costa, a Front-End Dev based in Brazil. 
-                        Working as freelancer with Node, ReactJS and NextJS, ThreeJS, and GSAP 
-                        we can create great and new experiences in the web.
-                </p>
+                <p className="plex-mono text-xl">{t('text')}</p>
             </div>
         </div>)
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import ProjectCard from "@/components/Projects/ProjectCard"
 import { usePageContext } from "@/contexts/PageContext"
 import { useAnimate } from "framer-motion"
@@ -6,12 +8,14 @@ import terraqueaImage from "../public/terraquea.png"
 import fantasticaImage from '../public/fantasticapay.png'
 import calculator from '../public/calculator.png'
 import world from '../public/world.png'
+import { useTranslations } from "next-intl"
 
 const Projects = () => {
 
     const [scope, animate] = useAnimate()
     const {currentPage, previousPage} : any = usePageContext()
     const [notOpenStyle, setNotOpenStyle] = useState('max-h-0 max-w-0 overflow-hidden')
+    const t = useTranslations('projects')
 
     const scrollToTop = () => {
         document.body.scrollTo({
@@ -22,18 +26,18 @@ const Projects = () => {
     
     useEffect(() => {
 
-        const yTimes = -(scope.current.getClientRects()[0].height - 120) / document.body.clientHeight - 0.3
+        const yTimes = scope.current.getClientRects()[0].height / window.innerHeight
         
         // IF IS THE PREVIOUS PAGE
         if(currentPage !== 1 && previousPage == 1){
 
             // IF IS IN THE HOME PAGE
             if(currentPage == 0){
-                animate(scope.current, {opacity: 0.00, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+                animate(scope.current, {opacity: 0.00, scale: 2.0, zIndex: -1, y: -1.3 * yTimes * window.innerHeight}, {duration: 1, ease: "anticipate"})
                 return
             }
 
-            animate(scope.current, {opacity: 0.03, scale: 2.0, zIndex: -1, y: yTimes * document.body.clientHeight}, {duration: 1, ease: "anticipate"})
+            animate(scope.current, {opacity: 0.05, scale: 2.0, zIndex: -1, y: -1.3 * yTimes * window.innerHeight}, {duration: 1, ease: "anticipate"})
             return
         }
 
@@ -55,42 +59,36 @@ const Projects = () => {
         
         <div ref={scope} className={`mx-auto flex flex-col justify-center items-center mt-4 w-full absolute top-0 ${notOpenStyle}`}>
             <div className="flex flex-col mt-8 ">    
-                <h1 className="plex-mono  text-5xl max-w-sm">PROJECTS_</h1>
+                <h1 className="plex-mono  text-5xl max-w-sm uppercase">{t('name')}</h1>
                 <div className="h-[4px] w-full bg-red-700 my-4"></div>
                 <div className="h-fit p-3 bg-gray-500 bg-opacity-50">
-                    <p className="plex-mono w-full text-md">
-                        Below are some of the key projects that Ive worked on, each reflecting my 
-                        passion for creating engaging and responsive web experiences.
-                    </p>
+                    <p className="plex-mono w-full text-md">{t('description')}</p>
                 </div>
                 <ProjectCard 
-                    title="FantasticaPay"
-                    description="FantasticaPay.com.br is an online platform for the sale of credit card machines, 
-                    crafted using JavaScript, CSS, and HTML."
+                    title={t('project0_title')}
+                    description={t('project0_description')}
                     tecnologies={['JavaScript', 'CSS', 'HTML']}
                     website="https://fantasticapay.com.br/"
                     img={fantasticaImage}
                 />
                 <ProjectCard 
-                    title="Terraquea"
-                    description="Natural products website, crafted with JavaScript, ThreeJS, GSAP, CSS, HTML. 
-                    The main goal was to create an immersive experience for a coming soon page."
+                    title={t('project1_title')}
+                    description={t('project1_description')}
                     tecnologies={['JavaScript', 'ThreeJS', 'GSAP', 'CSS', 'HTML']}
                     website="https://terraquea.com.br"
                     github="https://github.com/ruancostacampos/terraquea-coming-soon/tree/main"
                     img={terraqueaImage}
                 />
                 <ProjectCard 
-                    title="Credit Card Taxes Calculator"
-                    description="Introducing a bespoke credit card fee calculator tailored to the user's rates, utilized for precise loan calculations and financial planning."
+                    title={t('project2_title')}
+                    description={t('project2_description')}
                     tecnologies={['JavaScript', 'CSS', 'HTML']}
                     website="https://mundodasmaquininhas.com.br/calculadora/"
                     img={calculator}
                 />
                 <ProjectCard 
-                    title="World Of Card Machines"
-                    description="Designed and developed the 'World of Card Machines' website, offering diverse options with transparent rates, 
-                    zero PIX fees, and exclusive discounts for informed payment choices."
+                    title={t('project3_title')}
+                    description={t('project3_description')}
                     tecnologies={['JavaScript', 'CSS', 'HTML']}
                     website="https://mundodasmaquininhas.com.br/"
                     img={world}
