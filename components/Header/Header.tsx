@@ -3,12 +3,14 @@ import { useEffect, useRef, useState } from "react";
 
 import textHoverAnimation from "@/utils/textHoverAnimation";
 import { usePageContext } from "@/contexts/PageContext";
+import { useTranslations } from "next-intl";
 
 export default function Header(){
 
     const [isOpen, setIsOpen] = useState(false)
     const [customStyle, setCustomStyle] = useState('hidden')
     const {setPage} : any = usePageContext()
+    const t = useTranslations('header')
 
     const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -82,10 +84,10 @@ export default function Header(){
                 =
             </div>
             <audio ref={audioRef} src="/hover.mp3" />
-                <ul className={`flex flex-col absolute bg-zinc-200 left-0 top-0 w-screen h-screen justify-center items-center md:w-fit md:bg-transparent md:h-auto md:relative md:flex-row gap-8 mx-auto font-bold transition-all ${customStyle}`}>
+                <ul className={`flex flex-col absolute bg-zinc-200 left-0 top-0 w-screen h-screen justify-center items-center md:w-fit md:bg-transparent md:h-auto md:relative md:flex-row gap-8 mx-auto font-bold transition-all uppercase ${customStyle}`}>
                 <li>
                     <a 
-                        className="hover:text-red-700" 
+                        className="hover:text-red-700 cursor-pointer" 
                         onMouseEnter={(e) => {
                             playAudio()
                             textHoverAnimation(e)
@@ -95,44 +97,40 @@ export default function Header(){
                             setPage(0)
                             handleClick()
                         }}
-                        href="#home"
-                    >HOME_</a>
+                    >{t('home')}</a>
                 </li>
                 <li>
                     <a 
-                        className="hover:text-red-700"
+                        className="hover:text-red-700 cursor-pointer"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         onClick={() => {
                             setPage(1)
                             handleClick()
                         }}
-                        href="#projects"
-                    >PROJECTS_</a>
+                    >{t('projects')}</a>
                 </li>
                 <li>
                     <a 
-                        className="hover:text-red-700"
+                        className="hover:text-red-700 cursor-pointer"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         onClick={() => {
                             setPage(3)
                             handleClick()
-                        }}
-                        href="#experiments" 
-                    >EXPERIMENTS_</a>
+                        }} 
+                    >{t('experiments')}</a>
                 </li>
                 <li>
                     <a 
-                        className="hover:text-red-700"
+                        className="hover:text-red-700 cursor-pointer"
                         onMouseEnter={(e) => {playAudio();textHoverAnimation(e);}} 
                         onMouseLeave={stopAudio}
                         onClick={() => {
                             setPage(2)
                             handleClick()
                         }}
-                        href="#about"
-                    >ABOUT_</a>
+                    >{t('about')}</a>
                 </li>
             </ul>
         </header>

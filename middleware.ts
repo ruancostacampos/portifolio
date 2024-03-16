@@ -1,10 +1,14 @@
-import { NextRequest, NextResponse } from "next/server";
-
-let locales = ['en', 'ptbr']
-
-export function middleware(request: NextRequest){
-    const {pathname} = request.nextUrl
-    const pathnameHasLocale = locales.some(
-        (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-    )
-}
+import createMiddleware from 'next-intl/middleware';
+ 
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ['en', 'pt'],
+ 
+  // Used when no locale matches
+  defaultLocale: 'en'
+});
+ 
+export const config = {
+  // Match only internationalized pathnames
+  matcher: ['/', '/(en|pt)/:path*']
+};

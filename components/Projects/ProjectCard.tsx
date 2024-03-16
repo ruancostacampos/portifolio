@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import Image, { StaticImageData } from "next/image"
 
 interface ProjectCardProps {
@@ -11,6 +12,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, tecnologies, website, github, img, video }: ProjectCardProps) => {
+    const t = useTranslations('projects')
     return (
         <div className="flex flex-col mt-4 py-4 rounded">
             <div className="w-fit px-2">
@@ -39,7 +41,7 @@ const ProjectCard = ({ title, description, tecnologies, website, github, img, vi
                         <div className="flex gap-4 self-end flex-row-reverse">
                         {website &&
                             <a href={website} target="_blank" className="bg-neutral-800 bg-opacity-80 text-gray-100 px-2 plex-mono p-2 rounded hover:bg-slate-50 hover:text-black">
-                                Open website
+                                {t('open_website')}
                             </a>
                         }
                         {github &&
