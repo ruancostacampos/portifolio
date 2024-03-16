@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useLayoutEffect, useState } from "react"
-import ModelViewer from "../components/Home/ModelViewer"
+import ModelViewer from "./Home/ModelViewer"
 import {useAnimate } from "framer-motion"
 import { usePageContext } from "@/contexts/PageContext"
 import { useTranslations } from "next-intl"

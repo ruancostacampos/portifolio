@@ -28,7 +28,7 @@
       "experiment3_description": "Um quiz criado colaborativamente com uma equipe internacional em uma base voluntária, desenvolvido usando JavaScript."
     },
     "about": {
-      "name" : "about_",
+      "name" : "Sobre_",
       "description": "Entusiasmado com o desenvolvimento web, atualmente estou mergulhando no mundo da programação com foco principal em tecnologias web. Tenho explorado Three.js, GSAP, Next.js e React.js para criar experiências web envolventes. Como um desenvolvedor iniciante, também estou me aventurando no desenvolvimento backend usando Node.js. Estou ansioso para abraçar desafios, aprender e crescer no campo dinâmico do desenvolvimento web. Aberto a oportunidades que me permitam aplicar e expandir minhas habilidades, trago um novo olhar e um compromisso com a aprendizagem contínua."
     },
     "header": {

@@ -1,10 +1,9 @@
-import HomeDetails from '@/pages/HomeDetails'
+import HomeDetails from '@/components/HomeDetails'
 import Header from '../../components/Header/Header'
-import About from '@/pages/About'
+import About from '@/components/About'
 import { usePageContext } from '@/contexts/PageContext'
-import Projects from '@/pages/Projects'
-import Experiments from '@/pages/Experiments'
-import { useTranslations } from 'next-intl'
+import Projects from '@/components/Projects'
+import Experiments from '@/components/Experiments'
 import LocaleSwitcherSelect from '@/components/LocaleSwitcher/LocaleSwitcher'
 
 export default function Home() {
