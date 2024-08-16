@@ -5,6 +5,7 @@ import { usePageContext } from '@/contexts/PageContext'
 import Projects from '@/components/Projects'
 import Experiments from '@/components/Experiments'
 import LocaleSwitcherSelect from '@/components/LocaleSwitcher/LocaleSwitcher'
+import MusicPlayer from '@/components/MusicPlayer/MusicPlayer'
 
 export default function Home() {
   
@@ -17,6 +18,7 @@ export default function Home() {
           <Projects />
           <About />
           <Experiments/>
+          <MusicPlayer/>
         </main>
     </>
   )
