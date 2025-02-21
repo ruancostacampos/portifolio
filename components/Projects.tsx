@@ -75,7 +75,7 @@ const Projects = () => {
                     title={t('project1_title')}
                     description={t('project1_description')}
                     tecnologies={['JavaScript', 'ThreeJS', 'GSAP', 'CSS', 'HTML']}
-                    website="https://terraquea.com.br"
+                    website="https://terraquea-coming-soon.vercel.app/"
                     github="https://github.com/ruancostacampos/terraquea-coming-soon/tree/main"
                     img={terraqueaImage}
                 />
